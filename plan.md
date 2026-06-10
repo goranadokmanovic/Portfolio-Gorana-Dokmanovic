@@ -103,6 +103,25 @@ Ovde snimamo sve promene na sajtu: šta je urađeno, kada i zašto.
 
 ### Git
 - [x] Commit: `de5a86c` — Redizajn sekcije Projekti (velike kartice, SSMM, Optika, Portfolio)
+- [x] Commit: `d3bfb47` — Ažuriran plan.md sa hash-om commita
+
+---
+
+## 10. jun 2026. (kasno veče) — Hero centriranje i kontakt forma
+
+### Početna (Hero) — naslov i dugme
+- [x] Prva linija naslova („Gradim digitalna rešenja koja rade”) centrirana u odnosu na dugme **Pogledaj radove** (ista vertikalna osa)
+- [x] `.hero-content` — flex kolona sa `align-items: center` (naslov i dugme dele centar)
+- [x] `.hero-heading-line1` — prirodna širina teksta (`max-width: none`), bez stezanja u 1040px kontejner (tekst je širi ~1161px pa je prelazio udesno)
+- [x] Kompenzacija `letter-spacing`-a: `padding-right` + `margin-right` (desktop 0.04em, mobilni 0.02em)
+- [x] Font-size naslova: `clamp(2.15rem, 4.8vw, 3.55rem)` (desktop), `clamp(1.5rem, 5.6vw, 2.15rem)` (mobilni) — zamenjen stari `calc(clamp(... - 13px) + 2px)` koji je blokirao vidljive promene
+- [x] `styles.css?v=40`
+
+### Kontakt forma
+- [x] Label **PORUKA** spušten za jedan red — `.form-row + .form-group { margin-top: ... }`
+
+### Git
+- [ ] Commit: — Hero centriranje naslova u odnosu na dugme, PORUKA spacing, CSS v40
 
 ---
 
