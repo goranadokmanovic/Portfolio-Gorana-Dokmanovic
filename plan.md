@@ -121,7 +121,7 @@ Ovde snimamo sve promene na sajtu: šta je urađeno, kada i zašto.
 - [x] Label **PORUKA** spušten za jedan red — `.form-row + .form-group { margin-top: ... }`
 
 ### Git
-- [ ] Commit: — Hero centriranje naslova u odnosu na dugme, PORUKA spacing, CSS v40
+- [x] Commit: `9aa41f4` — Hero centriranje naslova u odnosu na dugme, PORUKA spacing, CSS v40
 
 ---
 
