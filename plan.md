@@ -69,7 +69,7 @@ Ovde snimamo sve promene na sajtu: šta je urađeno, kada i zašto.
 
 ### Git
 - [x] Commit: `d33c7e4` — Azuriraj portfolio na AI Developer brend, novi layout i tekstove
-- [x] Commit i push: `plan.md`, ispravka EN WEB DESIGN naslova
+- [x] Commit: `cc72c26` — plan.md, ispravka EN WEB DESIGN naslova
 
 ---
 
