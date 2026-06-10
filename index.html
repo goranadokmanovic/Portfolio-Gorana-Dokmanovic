@@ -11,7 +11,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500;600&family=Lato:wght@300;400;500;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet" />
 
-  <link rel="stylesheet" href="styles.css?v=30" />
+  <link rel="stylesheet" href="styles.css?v=31" />
 
   <!-- EmailJS SDK -->
   <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
@@ -90,52 +90,66 @@
     </div>
   </section>
 
-  <!-- Radovi -->
+  <!-- Projekti -->
+  <!-- TODO_OPTIKA_URL: Vercel demo URL — also set in script.js (TODO_OPTIKA_URL) -->
   <section id="portfolio" class="section section-observe">
     <div class="section-inner">
-      <header class="section-header">
-        <h2 data-i18n="portfolio.heading">Moji radovi</h2>
-        <p data-i18n="portfolio.subtitle">Dve oblasti, jedan pristup — pažnja prema detaljima i želja da ono što napravim ima smisao.</p>
+      <header class="section-header projects-header">
+        <h2 data-i18n="portfolio.heading">Projekti</h2>
+        <p data-i18n="portfolio.subtitle">AI proizvodi i web dizajn — jedan pristup, pažnja prema detaljima.</p>
       </header>
 
-      <div class="portfolio-split">
-        <!-- Levo: AI kodiranje -->
-        <div class="portfolio-column portfolio-column--apps">
-          <h3 class="portfolio-subtitle" data-i18n="portfolio.ai_title">AI kodiranje</h3>
-          <p class="portfolio-subtitle-desc" data-i18n="portfolio.ai_desc">Digitalni proizvodi koji rešavaju svakodnevne probleme...i lične i poslovne.</p>
-          <div class="portfolio-grid portfolio-grid--small portfolio-grid--apps">
-        <a href="./" class="portfolio-item portfolio-item-app float-up" target="_blank" rel="noopener" title="Otvori portfolio">
-          <div class="portfolio-image">
-            <img src="images/logo transparent.png?v=2" alt="Portfolio My Nest Of 4" />
-            <div class="portfolio-overlay">
-              <span>Portfolio – My Nest Of 4</span>
-            </div>
+      <div class="projects-grid">
+        <a href="https://ssmm.live" class="project-card float-up" target="_blank" rel="noopener">
+          <div class="project-card__media">
+            <span class="project-card__tag" data-i18n="portfolio.p1.tag">AI PROIZVOD</span>
+            <img class="project-card__img" src="images/projects/ssmm.png" alt="" data-project-initial="S" />
+            <div class="project-card__placeholder" hidden aria-hidden="true">S</div>
+          </div>
+          <div class="project-card__body">
+            <h3 class="project-card__title" data-i18n="portfolio.p1.name">SSMM — Smart Social Media Manager</h3>
+            <p class="project-card__desc" data-i18n="portfolio.p1.desc">AI SaaS platforma koja malim biznisima generiše objave, slike i video za društvene mreže — samostalno izgrađena i lansirana, sa aktivnom naplatom pretplata.</p>
+            <p class="project-card__tech" data-i18n="portfolio.p1.tech">Next.js · Supabase · Gemini · Veo · Dodo Payments</p>
+            <span class="project-card__cta">
+              <span data-i18n="portfolio.cta">Pogledaj uživo</span>
+              <span class="project-card__arrow" aria-hidden="true">→</span>
+            </span>
           </div>
         </a>
-        <a href="https://licnefinansijedz2.netlify.app/" class="portfolio-item portfolio-item-app float-up" target="_blank" rel="noopener" title="Lične finansije – Tracker">
-          <div class="portfolio-image">
-            <img src="images/app licne finansije.png" alt="Lične finansije – praćenje prihoda i rashoda" />
-            <div class="portfolio-overlay">
-              <span data-i18n="portfolio.open_app">Otvori app</span>
-            </div>
-          </div>
-        </a>
-        <a href="#" class="portfolio-item portfolio-item-app float-up" target="_blank" rel="noopener">
-          <div class="portfolio-image">
-            <div class="portfolio-placeholder">
-              <span data-i18n="portfolio.project3">Projekat 3</span>
-              <small data-i18n="portfolio.add_link">Dodaj link i sliku</small>
-            </div>
-          </div>
-        </a>
-          </div>
-        </div>
 
-        <!-- Desno: Web dizajn -->
-        <div class="portfolio-column portfolio-column--dizajn">
-          <h3 class="portfolio-subtitle" data-i18n="portfolio.design_title">WEB DIZAJN</h3>
-          <p class="portfolio-subtitle-desc" data-i18n="portfolio.design_desc">Web stranica po vašoj meri.</p>
-        </div>
+        <a href="#" id="project-optika-link" class="project-card float-up" target="_blank" rel="noopener">
+          <div class="project-card__media">
+            <span class="project-card__tag" data-i18n="portfolio.p2.tag">WEB DIZAJN · 3D</span>
+            <img class="project-card__img" src="images/projects/optika.png" alt="" data-project-initial="O" />
+            <div class="project-card__placeholder" hidden aria-hidden="true">O</div>
+          </div>
+          <div class="project-card__body">
+            <h3 class="project-card__title" data-i18n="portfolio.p2.name">Optika Kosović — 3D Landing</h3>
+            <p class="project-card__desc" data-i18n="portfolio.p2.desc">Cinematic landing stranica: 3D naočare koje scroll režira — rotacija, okret ka posetiocu i 'stavljanje na lice', uz custom kursor-sočivo.</p>
+            <p class="project-card__tech" data-i18n="portfolio.p2.tech">Next.js · Three.js · React Three Fiber · Framer Motion</p>
+            <span class="project-card__cta">
+              <span data-i18n="portfolio.cta">Pogledaj uživo</span>
+              <span class="project-card__arrow" aria-hidden="true">→</span>
+            </span>
+          </div>
+        </a>
+
+        <article class="project-card project-card--current float-up" aria-current="page">
+          <div class="project-card__media">
+            <span class="project-card__tag" data-i18n="portfolio.p3.tag">WEB DIZAJN</span>
+            <img class="project-card__img" src="images/projects/portfolio.png" alt="" data-project-initial="P" />
+            <div class="project-card__placeholder" hidden aria-hidden="true">P</div>
+          </div>
+          <div class="project-card__body">
+            <h3 class="project-card__title" data-i18n="portfolio.p3.name">Portfolio — ovaj sajt</h3>
+            <p class="project-card__desc" data-i18n="portfolio.p3.desc">Sajt koji upravo gledate — ručno kodiran, dvojezičan (SR/EN), sa zvezdanim nebom i zlatnim detaljima. Bez šablona, bez WordPressa.</p>
+            <p class="project-card__tech" data-i18n="portfolio.p3.tech">HTML · CSS · JavaScript · i18n</p>
+            <span class="project-card__here">
+              <span data-i18n="portfolio.p3.here">Upravo ste tu.</span>
+              <span class="project-card__here-star" aria-hidden="true">✦</span>
+            </span>
+          </div>
+        </article>
       </div>
     </div>
   </section>

@@ -544,276 +544,234 @@ section {
   margin-bottom: 0;
 }
 
-/* Portfolio */
+/* Projects (portfolio section) */
 
 #portfolio {
   position: relative;
-  z-index: 12; /* iznad lebdećih čestica */
+  z-index: 12;
 }
 
 #portfolio.section {
-  padding-top: calc(var(--nav-height) + 1.25rem - 8em);
-  padding-bottom: calc(1.5rem + 8em);
+  padding-top: calc(var(--nav-height) + 1.25rem - 4em);
+  padding-bottom: calc(1.5rem + 4em);
 }
 
 #portfolio .section-header {
-  transform: translateY(-4.8em);
+  transform: none;
+  margin-bottom: 2.5rem;
 }
 
-#portfolio .section-header h2,
-#portfolio .portfolio-subtitle {
-  font-size: calc(clamp(2rem, 2.8vw, 2.3rem) + 3px);
+#portfolio .section-header p {
+  max-width: 640px;
 }
 
-#portfolio .section-header p,
-#portfolio .portfolio-subtitle-desc,
-#portfolio .portfolio-grid--small .portfolio-overlay span,
-#portfolio .portfolio-placeholder,
-#portfolio .portfolio-placeholder small {
-  font-size: calc(0.92rem + 3px);
-  line-height: 1.55;
-}
-
-.portfolio-split {
+.projects-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 5rem;
-  align-items: start;
-  margin-top: 1rem;
-}
-
-.portfolio-column {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.75rem;
   min-width: 0;
 }
 
-#portfolio .portfolio-column {
-  max-width: 540px;
+.projects-grid .project-card:nth-child(3):last-child {
+  grid-column: 1 / -1;
+  max-width: calc((100% - 1.75rem) / 2);
   justify-self: center;
-}
-
-#portfolio .portfolio-column:first-child {
-  justify-self: end;
-}
-
-#portfolio .portfolio-column:last-child {
-  justify-self: start;
-}
-
-#portfolio .portfolio-column--dizajn {
-  margin-left: 12ch;
-}
-
-#portfolio .portfolio-subtitle {
-  letter-spacing: 0.2em;
-  margin-bottom: calc(0.4rem + 0.8em);
-  white-space: nowrap;
-}
-
-#portfolio .portfolio-subtitle-desc {
-  margin-bottom: 0.75rem;
-}
-
-#portfolio .portfolio-grid--small {
-  gap: 0.6rem;
-}
-
-#portfolio .portfolio-grid--small .portfolio-item {
-  padding: 0.2rem;
-}
-
-.portfolio-subtitle {
-  font-family: "Playfair Display", serif;
-  font-size: 1.35rem;
-  letter-spacing: 0.2em;
-  text-transform: uppercase;
-  color: var(--color-gold);
-  margin: 0 0 0.4rem;
-  padding-bottom: 0.25rem;
-  border-bottom: 1px solid rgba(201, 168, 76, 0.35);
-  display: inline-block;
-}
-.portfolio-column + .portfolio-column .portfolio-subtitle {
-  margin-top: 0;
-}
-.portfolio-subtitle-desc {
-  color: var(--color-text-muted);
-  font-size: 0.85rem;
-  margin: 0 0 1rem;
-  max-width: 100%;
-}
-
-.portfolio-grid {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 1.6rem;
-}
-
-/* Manje kartice u split prikazu (levo / desno) */
-.portfolio-grid--small {
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 0.9rem;
-}
-.portfolio-grid--small .portfolio-item {
-  padding: 0.35rem;
-  border-radius: 1rem;
-}
-.portfolio-grid--small .portfolio-image {
-  border-radius: 0.75rem;
-}
-.portfolio-grid--small .portfolio-image img {
-  border-radius: 0.75rem;
-}
-.portfolio-grid--small .portfolio-overlay span {
-  font-size: 0.7rem;
-}
-.portfolio-grid--small .portfolio-item-portrait {
-  max-width: 140px;
-}
-
-.portfolio-grid--apps {
-  margin-top: 0;
-}
-
-.portfolio-item {
-  position: relative;
-  overflow: visible;
-  border-radius: 1.4rem;
-  background: transparent;
-  box-shadow: 0 18px 45px rgba(0, 0, 0, 0.7);
-  padding: 0.55rem;
-  z-index: 0;
-  transition: z-index 0s 0.2s;
-}
-.portfolio-item:hover {
-  z-index: 100;
-  transition: z-index 0s 0s;
-}
-.portfolio-image {
-  position: relative;
-  isolation: isolate;
   width: 100%;
-  /* landscape – zajednički odnos za većinu radova */
-  aspect-ratio: 4 / 3;
-  overflow: hidden;
+}
+
+.project-card {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  text-decoration: none;
+  color: inherit;
+  background: rgba(26, 26, 26, 0.92);
+  border: 1px solid rgba(201, 168, 76, 0.1);
   border-radius: 1.1rem;
+  overflow: hidden;
+  transition:
+    transform 300ms cubic-bezier(0.16, 1, 0.3, 1),
+    border-color 300ms cubic-bezier(0.16, 1, 0.3, 1),
+    box-shadow 300ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.project-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(201, 168, 76, 0.4);
+  box-shadow:
+    0 20px 50px rgba(0, 0, 0, 0.55),
+    0 0 40px rgba(201, 168, 76, 0.12);
+}
+
+.project-card__media {
+  position: relative;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
   background: var(--color-bg-alt);
-  transition: transform 350ms ease;
 }
 
-/* portreti – uži, viši okvir da se cela slika vidi */
-.portfolio-item-portrait {
-  justify-self: center;
-  max-width: 280px;
-}
-.portfolio-item-portrait .portfolio-image {
-  aspect-ratio: 2 / 3;
-}
-
-
-.portfolio-image img {
+.project-card__img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  transform: scale(1.02);
-  transition: transform 260ms ease;
-  border-radius: 1.1rem;
 }
 
-.portfolio-overlay {
+.project-card__img[hidden] {
+  display: none;
+}
+
+.project-card__placeholder {
   position: absolute;
   inset: 0;
-  background: radial-gradient(
-    circle at top,
-    rgba(201, 168, 76, 0.1),
-    rgba(0, 0, 0, 0.9)
-  );
-  color: var(--color-text);
   display: flex;
-  align-items: flex-end;
-  justify-content: center;
-  padding: 1.5rem;
-  opacity: 0;
-  transform: translateY(15%);
-  transition: opacity 220ms ease, transform 220ms ease;
-}
-
-.portfolio-overlay span {
-  font-family: "Playfair Display", serif;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  font-size: 0.8rem;
-}
-
-/* Placeholder za AI kodiranje – kartice bez slike (dodaj kasnije link + img) */
-.portfolio-placeholder {
-  width: 100%;
-  height: 100%;
-  min-height: 140px;
-  display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 0.35rem;
-  background: linear-gradient(145deg, rgba(26, 26, 26, 0.95), rgba(201, 168, 76, 0.08));
-  border: 1px dashed rgba(201, 168, 76, 0.4);
-  color: var(--color-text-muted);
-  font-size: 0.85rem;
-}
-.portfolio-placeholder span {
+  background: linear-gradient(145deg, rgba(17, 17, 17, 0.98), rgba(201, 168, 76, 0.06));
   font-family: "Playfair Display", serif;
-  color: var(--color-text);
+  font-size: clamp(3rem, 8vw, 4.5rem);
+  font-weight: 600;
+  color: var(--color-gold);
   letter-spacing: 0.06em;
-  text-transform: uppercase;
-}
-.portfolio-placeholder small {
-  font-size: 0.7rem;
-  opacity: 0.8;
 }
 
-.portfolio-item-app {
-  text-decoration: none;
-  color: inherit;
+.project-card__placeholder[hidden] {
+  display: none;
 }
 
-.portfolio-item::before {
-  content: "";
+.project-card__tag {
   position: absolute;
-  inset: 0;
-  border-radius: inherit;
-  border: 1px solid rgba(201, 168, 76, 0.45);
-  opacity: 0;
-  transform: scale(1.02);
-  transition: opacity 220ms ease, transform 220ms ease;
-  pointer-events: none;
+  top: 0.85rem;
+  left: 0.85rem;
+  z-index: 2;
+  padding: 0.35rem 0.65rem;
+  border-radius: 999px;
+  background: rgba(17, 17, 17, 0.82);
+  border: 1px solid rgba(201, 168, 76, 0.25);
+  font-family: ui-monospace, "Cascadia Code", "Segoe UI Mono", monospace;
+  font-size: 10px;
+  font-weight: 500;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--color-gold);
+  line-height: 1;
 }
 
-/* zoom na hover – do 2.8×, prelazi preko ostalih slika */
-.portfolio-item:hover .portfolio-image {
-  transform: scale(2);
-  transform-origin: center center;
-  transition: transform 400ms ease;
-  z-index: 20;
-  position: relative;
-  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.7), 0 0 0 1px rgba(201, 168, 76, 0.4);
+.project-card__body {
+  padding: 1.35rem 1.4rem 1.5rem;
+  min-width: 0;
 }
-.portfolio-item:hover .portfolio-image img {
+
+.project-card__title {
+  margin: 0 0 0.65rem;
+  font-family: "Playfair Display", serif;
+  font-size: clamp(1.25rem, 2.5vw, 1.47rem);
+  font-weight: 600;
+  line-height: 1.25;
+  color: var(--color-text);
+}
+
+.project-card__desc {
+  margin: 0 0 0.85rem;
+  font-size: 0.84rem;
+  line-height: 1.55;
+  color: rgba(232, 213, 176, 0.7);
+}
+
+.project-card__tech {
+  margin: 0 0 1.1rem;
+  font-family: ui-monospace, "Cascadia Code", "Segoe UI Mono", monospace;
+  font-size: 11px;
+  letter-spacing: 0.04em;
+  line-height: 1.5;
+  color: rgba(232, 213, 176, 0.4);
+}
+
+.project-card__cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-size: 0.92rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  color: var(--color-gold);
+}
+
+.project-card__arrow {
+  display: inline-block;
+  transition: transform 300ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.project-card:hover .project-card__arrow {
+  transform: translateX(4px);
+}
+
+.project-card--current {
+  cursor: default;
+}
+
+.project-card--current .project-card__media {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--color-bg);
+}
+
+.project-card--current .project-card__img {
+  width: auto;
+  height: auto;
+  max-width: min(44%, 220px);
+  max-height: 62%;
+  object-fit: contain;
+}
+
+.project-card--current:hover {
   transform: none;
-  transition: transform 350ms ease;
+  border-color: rgba(201, 168, 76, 0.1);
+  box-shadow: none;
 }
 
-.portfolio-item:hover .portfolio-overlay {
-  opacity: 0.12;
-  background: rgba(0, 0, 0, 0.15);
-  transform: translateY(0);
+.project-card__here {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.92rem;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  color: rgba(232, 213, 176, 0.5);
 }
 
-.portfolio-item:hover .portfolio-overlay span {
-  opacity: 1;
+.project-card__here-star {
+  color: var(--color-gold);
+  font-size: 0.85rem;
+  line-height: 1;
 }
 
-.portfolio-item:hover::before {
-  opacity: 1;
-  transform: scale(1.03);
+@media (max-width: 899px) {
+  .projects-grid {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 1.5rem;
+  }
+
+  .projects-grid .project-card:nth-child(3):last-child {
+    grid-column: auto;
+    max-width: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .project-card__body {
+    padding: 1.1rem 1.15rem 1.25rem;
+  }
+
+  .project-card__tag {
+    top: 0.65rem;
+    left: 0.65rem;
+    font-size: 9px;
+  }
+
+  .project-card__desc {
+    font-size: 0.92rem;
+  }
 }
 
 /* Process */
@@ -1230,20 +1188,6 @@ section {
 }
 
 @media (max-width: 960px) {
-  .portfolio-split {
-    grid-template-columns: 1fr;
-    gap: 2.5rem;
-  }
-
-  #portfolio .portfolio-column {
-    justify-self: center;
-    max-width: 100%;
-  }
-
-  #portfolio .portfolio-column--dizajn {
-    margin-left: 0;
-  }
-
   .about-layout {
     grid-template-columns: minmax(0, 1fr);
   }
@@ -1265,10 +1209,6 @@ section {
 
   .section {
     padding-inline: 1.3rem;
-  }
-
-  .portfolio-grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
   .process-steps {
@@ -1312,18 +1252,6 @@ section {
 
   .section-header p {
     font-size: 0.9rem;
-  }
-
-  .portfolio-grid {
-    grid-template-columns: minmax(0, 1fr);
-  }
-
-  .portfolio-grid--small {
-    grid-template-columns: minmax(0, 1fr);
-  }
-
-  .portfolio-item-portrait {
-    max-width: none;
   }
 
   .process-steps {

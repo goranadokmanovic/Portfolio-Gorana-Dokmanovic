@@ -73,11 +73,45 @@ Ovde snimamo sve promene na sajtu: šta je urađeno, kada i zašto.
 
 ---
 
+## 10. jun 2026. (večer) — Redizajn sekcije Projekti
+
+### Sekcija „Projekti” (bivši „Moji radovi”)
+- [x] Spojene kolone „AI KODIRANJE” i „WEB DIZAJN” u jednu sekciju **Projekti** (EN: **Projects**)
+- [x] Navigacija ažurirana: „Radovi” → „Projekti”
+- [x] Novi podnaslov: „AI proizvodi i web dizajn — jedan pristup, pažnja prema detaljima.”
+- [x] Stari layout (veliki category headingi + sitne thumbnail kartice) zamenjen **velikim project card** gridom
+
+### Project cards — dizajn
+- [x] Grid: 2 kolone (≥900px), 1 kolona na mobilnom; treća kartica centrirana ispod (2+1)
+- [x] Svaka kartica: screenshot 16:9, category tag (mono pill), naziv, opis, tech stack, CTA
+- [x] Hover: lift, jača gold border, glow, strelica CTA klizi desno
+- [x] Placeholder za nedostajuće slike (inicijal u gold) + `console.info` u `script.js`
+- [x] `styles.css?v=31`
+
+### Projekti — sadržaj
+- [x] **SSMM** — tag AI PROIZVOD, link `https://ssmm.live`, slika `images/projects/ssmm.png`
+- [x] **Optika Kosović — 3D Landing** — tag WEB DIZAJN · 3D, Vercel demo URL u `TODO_OPTIKA_URL` (`script.js`), slika `images/projects/optika.png`
+- [x] **Portfolio — ovaj sajt** — tag WEB DIZAJN, bez linka; label „Upravo ste tu. ✦” (EN: „You are here. ✦”) umesto CTA; samo GD logo u media zoni (bez pretrpanog hero screenshot-a); slika `images/projects/portfolio.png`
+
+### i18n
+- [x] Novi ključevi: `portfolio.p1.*`, `portfolio.p2.*`, `portfolio.p3.*`, `portfolio.cta`, `portfolio.p3.here`
+- [x] Uklonjeni stari ključevi za split layout (`portfolio.ai_title`, `portfolio.design_title`, itd.)
+
+### Slike
+- [x] Folder `images/projects/` — ssmm.png, optika.png, portfolio.png
+- [x] Dodatne izvorne slike: `images/app ssmm.png`, `images/web optika kosovic.png`, `images/app projekat 3.png`
+
+### Git
+- [ ] Commit i push — redizajn sekcije Projekti
+
+---
+
 ## Predstojeće promene
 
 <!-- Dodaj nove stavke ovde -->
 
-- [ ] 
+- [ ] Ažurirati `TODO_OPTIKA_URL` kad Vercel demo bude javan
+- [ ] Prave screenshot-e za kartice (SSMM dashboard, Optika 3D hero) umesto logo/thumbnail verzija
 
 ---
 

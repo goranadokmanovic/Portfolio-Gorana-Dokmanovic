@@ -305,13 +305,55 @@ if (yearEl) {
   });
 })();
 
+// TODO_OPTIKA_URL — replace when Vercel demo is public
+const TODO_OPTIKA_URL = "https://optika-kosovic-landing-3d-m48tjv7mv.vercel.app/";
+
+const EXPECTED_PROJECT_IMAGES = [
+  "images/projects/ssmm.png",
+  "images/projects/optika.png",
+  "images/projects/portfolio.png",
+];
+
+(function initProjects() {
+  const optikaLink = document.getElementById("project-optika-link");
+  if (optikaLink) optikaLink.href = TODO_OPTIKA_URL;
+
+  function showPlaceholder(img) {
+    img.hidden = true;
+    const placeholder = img.nextElementSibling;
+    if (placeholder?.classList.contains("project-card__placeholder")) {
+      placeholder.hidden = false;
+    }
+  }
+
+  document.querySelectorAll(".project-card__img").forEach((img) => {
+    img.addEventListener("error", () => showPlaceholder(img));
+    if (img.complete && img.naturalWidth === 0) {
+      showPlaceholder(img);
+    }
+  });
+
+  Promise.all(
+    EXPECTED_PROJECT_IMAGES.map(
+      (src) =>
+        new Promise((resolve) => {
+          const probe = new Image();
+          probe.onload = () => resolve({ src, ok: true });
+          probe.onerror = () => resolve({ src, ok: false });
+          probe.src = src;
+        })
+    )
+  ).then((results) => {
+    const missing = results.filter((r) => !r.ok).map((r) => r.src);
+    if (missing.length) {
+      console.info("[Portfolio] Expected project images (missing):", missing);
+    }
+  });
+})();
+
 // Pouzdane putanje za slike sa razmakom u nazivu
 const lineImg = document.querySelector(".decor-line-right img");
 if (lineImg) lineImg.src = "images/zlatna%20linija.png";
-const appFinansijeImg = document.querySelector('a[href*="licnefinansije"] .portfolio-image img');
-if (appFinansijeImg) appFinansijeImg.src = "images/app%20licne%20finansije.png";
-document.querySelectorAll(".portfolio-image img[alt*='3 kids']").forEach((el) => { el.src = "images/3%20kids.png?v=2"; });
-document.querySelectorAll(".portfolio-image img[alt*='Every single day']").forEach((el) => { el.src = "images/Every%20single%20day.png?v=4"; });
 
 // Logo je fiksiran u gornjem levom uglu (`position: fixed`) – bez JS pomeranja.
 
