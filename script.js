@@ -27,7 +27,15 @@
   });
 
   navLinks.querySelectorAll("a").forEach((link) => {
-    link.addEventListener("click", () => {
+    link.addEventListener("click", (e) => {
+      const href = link.getAttribute("href");
+      if (href && href.startsWith("#")) {
+        const target = document.querySelector(href);
+        if (target) {
+          e.preventDefault();
+          target.scrollIntoView({ behavior: "smooth", block: "start" });
+        }
+      }
       closeMenu();
     });
   });
@@ -305,68 +313,5 @@ if (appFinansijeImg) appFinansijeImg.src = "images/app%20licne%20finansije.png";
 document.querySelectorAll(".portfolio-image img[alt*='3 kids']").forEach((el) => { el.src = "images/3%20kids.png?v=2"; });
 document.querySelectorAll(".portfolio-image img[alt*='Every single day']").forEach((el) => { el.src = "images/Every%20single%20day.png?v=4"; });
 
-const birdsVideoA = document.getElementById("birds-video-a");
-const birdsVideoB = document.getElementById("birds-video-b");
-const birdsVideoSrc = "images/ptice%20video.mp4?v=7";
-if (birdsVideoA) birdsVideoA.src = birdsVideoSrc;
-if (birdsVideoB) birdsVideoB.src = birdsVideoSrc;
-document.querySelectorAll(".hero-birds-prasina").forEach((el) => { el.src = "images/zvedana%20prasina.png?v=2"; });
-
-// Crossfade na kraju videa da se manje vidi prelazak u petlji
-if (birdsVideoA && birdsVideoB) {
-  const LOOP_FADE_START = 0.55;
-  let active = "a";
-  let crossfadeLock = false;
-
-  birdsVideoA.style.opacity = "0.9";
-  birdsVideoB.style.opacity = "0";
-  // Neka video bude spreman pre autoplay-a (ponekad play() dobije reject ako metapodaci još nisu učitani)
-  try {
-    birdsVideoA.load();
-    birdsVideoB.load();
-  } catch (e) {
-    // ignor
-  }
-
-  const startPlayback = () => {
-    birdsVideoA.play().catch(() => {});
-  };
-
-  birdsVideoA.addEventListener("loadedmetadata", startPlayback, { once: true });
-  birdsVideoA.addEventListener("canplay", startPlayback, { once: true });
-  // Fallback da se ne čeka zauvek
-  setTimeout(startPlayback, 700);
-
-  function doCrossfade() {
-    if (crossfadeLock) return;
-    crossfadeLock = true;
-    if (active === "a") {
-      birdsVideoB.currentTime = 0;
-      birdsVideoB.play();
-      birdsVideoA.style.opacity = "0";
-      birdsVideoB.style.opacity = "0.9";
-      active = "b";
-    } else {
-      birdsVideoA.currentTime = 0;
-      birdsVideoA.play();
-      birdsVideoB.style.opacity = "0";
-      birdsVideoA.style.opacity = "0.9";
-      active = "a";
-    }
-    setTimeout(() => {
-      (active === "a" ? birdsVideoB : birdsVideoA).pause();
-      (active === "a" ? birdsVideoB : birdsVideoA).currentTime = 0;
-      crossfadeLock = false;
-    }, 500);
-  }
-
-  birdsVideoA.addEventListener("timeupdate", () => {
-    if (active === "a" && birdsVideoA.duration && birdsVideoA.currentTime >= birdsVideoA.duration - LOOP_FADE_START) doCrossfade();
-  });
-  birdsVideoB.addEventListener("timeupdate", () => {
-    if (active === "b" && birdsVideoB.duration && birdsVideoB.currentTime >= birdsVideoB.duration - LOOP_FADE_START) doCrossfade();
-  });
-}
-
-// (Logo) ponašanje je sada isključivo CSS (`position: sticky`) – bez JS pomeranja.
+// Logo je fiksiran u gornjem levom uglu (`position: fixed`) – bez JS pomeranja.
 

@@ -11,7 +11,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500;600&family=Lato:wght@300;400;500;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet" />
 
-  <link rel="stylesheet" href="styles.css?v=4" />
+  <link rel="stylesheet" href="styles.css?v=29" />
 
   <!-- EmailJS SDK -->
   <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
@@ -50,18 +50,13 @@
 
   <!-- Hero -->
   <section id="hero" class="section hero section-observe">
-    <div class="hero-logo">
-      <img src="images/logo transparent.png?v=2" alt="My Nest Of 4 logo" class="logo-image" />
-      <div class="hero-birds-wrap">
-        <video id="birds-video-a" class="hero-birds hero-birds-layer" src="images/ptice video.mp4?v=7" muted playsinline poster="images/ptice.png" aria-hidden="true"></video>
-        <video id="birds-video-b" class="hero-birds hero-birds-layer" src="images/ptice video.mp4?v=7" muted playsinline poster="images/ptice.png" aria-hidden="true"></video>
-        <img src="images/zvedana prasina.png?v=2" alt="" class="hero-birds-prasina hero-birds-prasina--edge" aria-hidden="true" />
-      </div>
-    </div>
     <div class="hero-content">
-      <h1 class="hero-heading" data-i18n="hero.heading">Iz mog gnezda u tvoje.</h1>
+      <h1 class="hero-heading">
+        <span class="hero-heading-line1" data-i18n="hero.heading_line1">Gradim digitalna rešenja koja rade</span>
+        <span class="hero-heading-line2" data-i18n="hero.heading_line2">dok ti živiš život.</span>
+      </h1>
       <p class="hero-subtext" data-i18n="hero.subtext">
-        Iz mog gnezda dolaze dve stvari: dizajn koji pretvara uspomene u priču i digitalni proizvodi koji olakšavaju život.
+        Web sajtovi i AI rešenja za ljude kojima je vreme dragoceno.
       </p>
       <button class="btn btn-gold" data-scroll-to="#portfolio" data-i18n="hero.cta">
         Pogledaj radove
@@ -80,13 +75,16 @@
       <div class="about-text section-observe-right">
         <h2 data-i18n="about.heading">Zdravo, ja sam Gorana</h2>
         <p data-i18n="about.p1">
-          Sve je počelo iz jedne sasvim lične želje, da uhvatim ono što fotografija sama po sebi ne može. Mama sam četvoro dece i znam koliko brzo trenuci prolaze. Zato kreiram personalizovane dizajne koji spajaju fotografije, emocije i godine u jednu smislenu celinu.
+          Sve je počelo iz radoznalosti. Jednog dana sam počela da istražujem kako AI alati zapravo funkcionišu, ne uz neki veliki plan, već iz čiste znatiželje. I pre nego što sam to i primetila, ta radoznalost se pretvorila u veštinu, a veština u posao.
         </p>
         <p data-i18n="about.p2">
-          A onda je stigla radoznalost. Počela sam da istražujem kako AI alati zapravo funkcionišu...ne uz neki veliki plan, već iz čiste znatiželje. I pre nego što sam to i primetila, ta radoznalost se pretvorila u veštinu, a veština u posao.
+          Mama sam četvoro dece i radim od kuće, što znači da svaki minut mora da vredi. Naučila sam da gradim brzo, pametno i precizno. Uz pomoć AI alata i vibe codinga, sama sam izgradila aplikaciju Sam Svoj MArketing Menadžer, AI-powered SaaS platformu za male biznise, od nule do produkcije.
         </p>
         <p data-i18n="about.p3">
-          Danas radim od kuće, okružena svojom „četvorkom”, sa laptopom u krilu i idejama koje ne prestaju. MyNestOf4 nije samo brend, to je moj način da porodičnim vrednostima dam mesto koje zaslužuju. I dokaz da se iz ljubavi prema svojima može izgraditi nešto sasvim stvarno....
+          Danas pomažem drugima da dobiju web prisustvo koje zaslužuju, funkcionalne, moderne sajtove i digitalne proizvode koji rešavaju stvarne probleme. Bez agencija, bez čekanja, bez kompromisa.
+        </p>
+        <p data-i18n="about.p4">
+          Ako tražiš nekoga ko razume probleme brzog života i nedostatak vremena, na pravom si mestu! Mogu izgraditi alat koji radi posao dok ti živiš život.
         </p>
       </div>
     </div>
@@ -104,7 +102,7 @@
         <!-- Levo: AI kodiranje -->
         <div class="portfolio-column portfolio-column--apps">
           <h3 class="portfolio-subtitle" data-i18n="portfolio.ai_title">AI kodiranje</h3>
-          <p class="portfolio-subtitle-desc" data-i18n="portfolio.ai_desc">Digitalni proizvodi koji rešavaju svakodnevne probleme, kako lične tako i u vašem biznisu.</p>
+          <p class="portfolio-subtitle-desc" data-i18n="portfolio.ai_desc">Digitalni proizvodi koji rešavaju svakodnevne probleme...i lične i poslovne.</p>
           <div class="portfolio-grid portfolio-grid--small portfolio-grid--apps">
         <a href="./" class="portfolio-item portfolio-item-app float-up" target="_blank" rel="noopener" title="Otvori portfolio">
           <div class="portfolio-image">
@@ -133,115 +131,10 @@
           </div>
         </div>
 
-        <!-- Desno: Dizajn -->
+        <!-- Desno: Web dizajn -->
         <div class="portfolio-column portfolio-column--dizajn">
-          <h3 class="portfolio-subtitle" data-i18n="portfolio.design_title">Dizajn</h3>
-          <p class="portfolio-subtitle-desc" data-i18n="portfolio.design_desc">Personalizovan dizajn koji čuva uspomene.</p>
-          <div class="portfolio-grid portfolio-grid--small">
-        <div class="portfolio-item float-up">
-          <div class="portfolio-image">
-            <img src="images/Every single day.png?v=4" alt="Every single day – svakodnevna ljubav" />
-            <div class="portfolio-overlay">
-              <span>Every single day</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="portfolio-item float-up">
-          <div class="portfolio-image">
-            <img src="images/3 kids.png?v=2" alt="3 kids – tri deteta" />
-            <div class="portfolio-overlay">
-              <span>3 kids</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="portfolio-item float-up">
-          <div class="portfolio-image">
-            <img src="images/babies.png?v=2" alt="Babies – nežne uspomene" />
-            <div class="portfolio-overlay">
-              <span>Babies</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="portfolio-item float-up">
-          <div class="portfolio-image">
-            <img src="images/couple 2 kids.png?v=2" alt="Par i dvoje dece" />
-            <div class="portfolio-overlay">
-              <span>Par i dvoje dece</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="portfolio-item float-up">
-          <div class="portfolio-image">
-            <img src="images/1.Jakob.png?v=2" alt="Jakob – personalizovani motiv" />
-            <div class="portfolio-overlay">
-              <span>Jakob</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="portfolio-item float-up">
-          <div class="portfolio-image">
-            <img src="images/1.Liam.png?v=2" alt="Liam – tipografski portret" />
-            <div class="portfolio-overlay">
-              <span>Liam</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="portfolio-item float-up">
-          <div class="portfolio-image">
-            <img src="images/pats.png?v=2" alt="Pets – ljubimci kao deo porodice" />
-            <div class="portfolio-overlay">
-              <span>Pets</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="portfolio-item float-up">
-          <div class="portfolio-image">
-            <img src="images/1.Rocky.png?v=2" alt="Rocky – tipografski ljubimac" />
-            <div class="portfolio-overlay">
-              <span>Rocky</span>
-            </div>
-          </div>
-        </div>
-
-        <!-- privremeno uklonjen through the years rad -->
-
-        <div class="portfolio-item float-up">
-          <div class="portfolio-image">
-            <img src="images/1.Greb.png?v=2" alt="Grebb – romantični portret para" />
-            <div class="portfolio-overlay">
-              <span>Grebb</span>
-            </div>
-          </div>
-        </div>
-
-        <!-- privremeno uklonjen Ona portret rad -->
-
-        <div class="portfolio-item float-up">
-          <div class="portfolio-image">
-            <img src="images/Vine couple.png?v=2" alt="Vine couple – elegantni par" />
-            <div class="portfolio-overlay">
-              <span>Vine couple</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="portfolio-item float-up portfolio-item-portrait">
-          <div class="portfolio-image">
-            <img src="images/ona.png?v=2" alt="Ona – portret" />
-            <div class="portfolio-overlay">
-              <span>Ona</span>
-            </div>
-          </div>
-        </div>
-
-          </div>
+          <h3 class="portfolio-subtitle" data-i18n="portfolio.design_title">WEB DIZAJN</h3>
+          <p class="portfolio-subtitle-desc" data-i18n="portfolio.design_desc">Web stranica po vašoj meri.</p>
         </div>
       </div>
     </div>
@@ -260,28 +153,28 @@
           <div class="step-circle">1</div>
           <h3 data-i18n="process.step1_title">Pišeš mi</h3>
           <p data-i18n="process.step1_desc">
-            Ukratko mi opišeš šta želiš — bilo da je u pitanju dizajn uspomene ili digitalni proizvod. Ja se pobrinem za sve ostalo.
+            Ukratko mi opišeš koji problem je potrebno da se reši. Ja se pobrinem za sve ostalo.
           </p>
         </div>
         <div class="process-step section-observe">
           <div class="step-circle">2</div>
           <h3 data-i18n="process.step2_title">Zajedno definišemo projekat</h3>
           <p data-i18n="process.step2_desc">
-            Kroz kratku razmenu informacija dogovaramo detalje — stil, funkcionalnost, rokove i sve što je važno da rezultat bude tačno ono što ti je neophodno.
+            Kroz kratku razmenu informacija dogovaramo detalje: stil, funkcionalnost, rokove i sve što je važno da rezultat bude tačno ono što ti je neophodno.
           </p>
         </div>
         <div class="process-step section-observe">
           <div class="step-circle">3</div>
           <h3 data-i18n="process.step3_title">Radim i pokazujem</h3>
           <p data-i18n="process.step3_desc">
-            Kreiram dizajn ili razvijam proizvod i šaljem ti da vidiš. Svaki projekat uključuje do dve besplatne korekcije.
+            Kreiram alat i šaljem ti da vidiš. Svaki projekat uključuje do dve besplatne korekcije.
           </p>
         </div>
         <div class="process-step section-observe">
           <div class="step-circle">4</div>
           <h3 data-i18n="process.step4_title">Preuzimaš gotov proizvod</h3>
           <p data-i18n="process.step4_desc">
-            Dobijaš finalni fajl ili funkcionalan digitalni proizvod — spreman za upotrebu.
+            Dobijaš funkcionalan digitalni proizvod, spreman za svakodnevnu upotrebu.
           </p>
         </div>
       </div>
@@ -294,7 +187,7 @@
       <header class="section-header">
         <h2 data-i18n="contact.heading">Hajde da napravimo nešto lepo zajedno</h2>
         <p data-i18n="contact.subtitle">
-          Imaš ideju — za dizajn, aplikaciju ili sajt? Opiši mi je u nekoliko rečenica i zajedno ćemo je pretvoriti u nešto stvarno.
+          Imaš ideju za aplikaciju ili sajt? Opiši mi je u nekoliko rečenica i zajedno ćemo je pretvoriti u nešto stvarno i korisno.
         </p>
       </header>
 
@@ -311,7 +204,7 @@
         </div>
         <div class="form-group">
           <label for="message" data-i18n="contact.message_label">Poruka</label>
-          <textarea id="message" name="message" rows="5" data-i18n-placeholder="contact.message_placeholder" placeholder="Ispričaj mi malo o osobi, povodu ili uspomeni..."></textarea>
+          <textarea id="message" name="message" rows="5" data-i18n-placeholder="contact.message_placeholder" placeholder=""></textarea>
         </div>
         <button type="submit" class="btn btn-gold" data-i18n="contact.submit">
           Pošalji poruku
@@ -323,9 +216,13 @@
 
   <footer class="footer">
     <div class="footer-inner">
-      <span>© <span id="year"></span> MyNestOf4 · <span data-i18n="footer.text">Dizajn iz srca</span></span>
+      <span>© <span id="year"></span> <span data-i18n="footer.text">Gorana Dokmanović · AI Developer & Web Designer</span></span>
     </div>
   </footer>
+
+  <div class="hero-logo">
+    <img src="images/GD logo.png" alt="GD logo" class="logo-image" />
+  </div>
 
   <script src="i18n.js"></script>
   <script src="script.js"></script>
