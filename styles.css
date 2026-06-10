@@ -606,6 +606,7 @@ section {
 #portfolio .portfolio-subtitle {
   letter-spacing: 0.2em;
   margin-bottom: calc(0.4rem + 0.8em);
+  white-space: nowrap;
 }
 
 #portfolio .portfolio-subtitle-desc {

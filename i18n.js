@@ -78,7 +78,7 @@ const translations = {
     "portfolio.subtitle": "Two fields, one approach \u2014 attention to detail and a desire to make everything I create meaningful.",
     "portfolio.ai_title": "AI Coding",
     "portfolio.ai_desc": "Digital products that solve everyday problems...both personal and business.",
-    "portfolio.design_title": "WEB DESIGN",
+    "portfolio.design_title": "WEB\u00a0DESIGN",
     "portfolio.design_desc": "A website tailored to you.",
     "portfolio.open_app": "Open app",
     "portfolio.project3": "Project 3",
