@@ -102,7 +102,7 @@ Ovde snimamo sve promene na sajtu: šta je urađeno, kada i zašto.
 - [x] Dodatne izvorne slike: `images/app ssmm.png`, `images/web optika kosovic.png`, `images/app projekat 3.png`
 
 ### Git
-- [ ] Commit i push — redizajn sekcije Projekti
+- [x] Commit: `de5a86c` — Redizajn sekcije Projekti (velike kartice, SSMM, Optika, Portfolio)
 
 ---
 
