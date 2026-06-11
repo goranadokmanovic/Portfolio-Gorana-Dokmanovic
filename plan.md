@@ -125,6 +125,33 @@ Ovde snimamo sve promene na sajtu: šta je urađeno, kada i zašto.
 
 ---
 
+## 11. jun 2026. — Mobilni header, hero i i18n
+
+### Header — logo na malim ekranima (varijanta B)
+- [x] GD logo (42px) u `.nav-inner` — levo u headeru na ≤768px
+- [x] Floating `.hero-logo` sakriven na mobilnom; na desktopu ostaje kao ranije
+- [x] Hamburger centar, SR | EN desno; sužena dekorativna zlatna linija (48px)
+
+### Početna (Hero) — samo mobilni (≤768px / ≤640px)
+- [x] Naslov veći: `clamp(1.85–1.9rem, 7vw, 2.5rem)`; podnaslov ~1.05–1.08rem
+- [x] Naslov se prelama (`white-space: normal`, `text-wrap: balance`) — bez odsecanja
+- [x] Dodatni razmaci: naslov → podnaslov (+1 red), podnaslov → dugme (+2 reda)
+- [x] Ceo hero blok podignut za 5 redova (`padding-top - 8em`); desktop ne diran
+- [x] `styles.css?v=45`
+
+### i18n — skraćeni tekstovi na mobilnom
+- [x] `resolveTranslation()` + `matchMedia(768px)` — automatski `_mobile` ključevi
+- [x] Kontakt naslov/podnaslov i footer skraćeni na malim ekranima (SR + EN)
+
+### Projekti kartica — Portfolio
+- [x] Media zona: svetla pozadina `#f9f6ed`, logo pun width/height u 16:9 okviru
+- [x] Ažuriran `images/projects/portfolio.png`
+
+### Git
+- [ ] Commit: — Mobilni header logo, hero tipografija i razmaci, i18n mobile, portfolio kartica
+
+---
+
 ## Predstojeće promene
 
 <!-- Dodaj nove stavke ovde -->

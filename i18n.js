@@ -47,7 +47,9 @@ const translations = {
     "process.step4_desc": "Dobijaš funkcionalan digitalni proizvod, spreman za svakodnevnu upotrebu.",
 
     "contact.heading": "Hajde da napravimo nešto lepo zajedno",
+    "contact.heading_mobile": "Hajde da radimo zajedno",
     "contact.subtitle": "Imaš ideju za aplikaciju ili sajt? Opiši mi je u nekoliko rečenica i zajedno ćemo je pretvoriti u nešto stvarno i korisno.",
+    "contact.subtitle_mobile": "Imaš ideju za sajt ili aplikaciju? Napiši mi u par rečenica.",
     "contact.name_label": "Ime i prezime",
     "contact.email_label": "E-mail adresa",
     "contact.message_label": "Poruka",
@@ -60,6 +62,7 @@ const translations = {
     "contact.error": "Nešto nije u redu. Pokušaj ponovo ili me kontaktiraj direktno.",
 
     "footer.text": "Gorana Dokmanović · AI Developer & Web Designer",
+    "footer.text_mobile": "Gorana Dokmanović · AI & Web",
   },
 
   en: {
@@ -110,7 +113,9 @@ const translations = {
     "process.step4_desc": "You get the final file or a fully functional digital product \u2014 ready to use.",
 
     "contact.heading": "Let\u2019s create something beautiful together",
+    "contact.heading_mobile": "Let\u2019s work together",
     "contact.subtitle": "Have an idea \u2014 for a design, app, or website? Describe it in a few sentences and we\u2019ll turn it into something real.",
+    "contact.subtitle_mobile": "Have an idea for a site or app? Tell me in a few sentences.",
     "contact.name_label": "Full name",
     "contact.email_label": "Email address",
     "contact.message_label": "Message",
@@ -123,12 +128,23 @@ const translations = {
     "contact.error": "Something went wrong. Please try again or contact me directly.",
 
     "footer.text": "Gorana Dokmanović · AI Developer & Web Designer",
+    "footer.text_mobile": "Gorana Dokmanović · AI & Web",
   },
 };
 
 (function () {
   const STORAGE_KEY = "mynestof4-lang";
+  const MOBILE_MQ = window.matchMedia("(max-width: 768px)");
   let currentLang = localStorage.getItem(STORAGE_KEY) || "sr";
+
+  function resolveTranslation(lang, key) {
+    if (!translations[lang]) return null;
+    const mobileKey = `${key}_mobile`;
+    if (MOBILE_MQ.matches && translations[lang][mobileKey]) {
+      return translations[lang][mobileKey];
+    }
+    return translations[lang][key] ?? null;
+  }
 
   function applyLanguage(lang) {
     currentLang = lang;
@@ -137,22 +153,25 @@ const translations = {
 
     document.querySelectorAll("[data-i18n]").forEach((el) => {
       const key = el.getAttribute("data-i18n");
-      if (translations[lang] && translations[lang][key]) {
-        el.textContent = translations[lang][key];
+      const text = resolveTranslation(lang, key);
+      if (text) {
+        el.textContent = text;
       }
     });
 
     document.querySelectorAll("[data-i18n-placeholder]").forEach((el) => {
       const key = el.getAttribute("data-i18n-placeholder");
-      if (translations[lang] && translations[lang][key]) {
-        el.placeholder = translations[lang][key];
+      const text = resolveTranslation(lang, key);
+      if (text) {
+        el.placeholder = text;
       }
     });
 
     document.querySelectorAll("[data-i18n-aria]").forEach((el) => {
       const key = el.getAttribute("data-i18n-aria");
-      if (translations[lang] && translations[lang][key]) {
-        el.setAttribute("aria-label", translations[lang][key]);
+      const text = resolveTranslation(lang, key);
+      if (text) {
+        el.setAttribute("aria-label", text);
       }
     });
 
@@ -174,4 +193,8 @@ const translations = {
   }
 
   applyLanguage(currentLang);
+
+  MOBILE_MQ.addEventListener("change", () => {
+    applyLanguage(currentLang);
+  });
 })();
