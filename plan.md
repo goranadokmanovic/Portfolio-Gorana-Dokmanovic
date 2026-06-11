@@ -148,7 +148,7 @@ Ovde snimamo sve promene na sajtu: šta je urađeno, kada i zašto.
 - [x] Ažuriran `images/projects/portfolio.png`
 
 ### Git
-- [ ] Commit: — Mobilni header logo, hero tipografija i razmaci, i18n mobile, portfolio kartica
+- [x] Commit: `8eba2a0` — Mobilni header logo, hero tipografija i razmaci, i18n mobile, portfolio kartica
 
 ---
 
