@@ -311,7 +311,7 @@ const TODO_OPTIKA_URL = "https://optika-kosovic-landing-3d-m48tjv7mv.vercel.app/
 const EXPECTED_PROJECT_IMAGES = [
   "images/projects/ssmm.png",
   "images/projects/optika.png",
-  "images/projects/portfolio.png",
+  "images/projects/astro.png",
 ];
 
 (function initProjects() {

@@ -152,6 +152,27 @@ Ovde snimamo sve promene na sajtu: šta je urađeno, kada i zašto.
 
 ---
 
+## 14. jun 2026. — Projekti: Natalne karte umesto Portfolio kartice
+
+### Sekcija Projekti — treća kartica
+- [x] **Portfolio — ovaj sajt** zamenjen projektom **Dragana Dokmanović — Natalne karte**
+- [x] Link: `https://astro-sajt.vercel.app/`
+- [x] Tag WEB DIZAJN; CTA „Pogledaj uživo →” (uklonjena oznaka „Upravo ste tu. ✦”)
+- [x] Screenshot hero sekcije: `images/projects/astro.png`
+- [x] Tech stack: Next.js · Vercel · Scroll-driven UI
+
+### i18n
+- [x] Ažurirani `portfolio.p3.*` (SR + EN)
+- [x] Uklonjen ključ `portfolio.p3.here`
+
+### script.js
+- [x] `EXPECTED_PROJECT_IMAGES`: `portfolio.png` → `astro.png`
+
+### Git
+- [ ] Commit: (sledeći) — Natalne karte kartica umesto Portfolio u sekciji Projekti
+
+---
+
 ## Predstojeće promene
 
 <!-- Dodaj nove stavke ovde -->
