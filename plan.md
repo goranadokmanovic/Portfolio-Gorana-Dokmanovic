@@ -155,7 +155,7 @@ Ovde snimamo sve promene na sajtu: šta je urađeno, kada i zašto.
 ## 14. jun 2026. — Projekti: Natalne karte umesto Portfolio kartice
 
 ### Sekcija Projekti — treća kartica
-- [x] **Portfolio — ovaj sajt** zamenjen projektom **Dragana Dokmanović — Natalne karte**
+- [x] **Portfolio — ovaj sajt** zamenjen projektom **Zvezdana Jovanović — Natalne karte**
 - [x] Link: `https://astro-sajt.vercel.app/`
 - [x] Tag WEB DIZAJN; CTA „Pogledaj uživo →” (uklonjena oznaka „Upravo ste tu. ✦”)
 - [x] Screenshot hero sekcije: `images/projects/astro.png`
@@ -178,6 +178,13 @@ Ovde snimamo sve promene na sajtu: šta je urađeno, kada i zašto.
 
 ### Git
 - [x] Commit: `0b022c3` — Astro Zvezda logo na Natalne karte kartici
+- [x] Commit: `c941a3b` — Ažuriraj plan.md sa hash-om commita za Astro Zvezda logo
+
+### i18n — ispravka imena na kartici
+- [x] **Dragana Dokmanović** → **Zvezdana Jovanović** u `portfolio.p3.name` (SR + EN) i `index.html`
+
+### Git
+- [ ] Commit: (sledeći) — Ispravka imena na Natalne karte kartici
 
 ---
 

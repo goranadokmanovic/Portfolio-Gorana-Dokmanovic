@@ -30,7 +30,7 @@ const translations = {
     "portfolio.p2.desc": "Cinematic landing stranica: 3D nao\u010dare koje scroll re\u017eira \u2014 rotacija, okret ka posetiocu i \u2018stavljanje na lice\u2019, uz custom kursor-so\u010divo.",
     "portfolio.p2.tech": "Next.js \u00b7 Three.js \u00b7 React Three Fiber \u00b7 Framer Motion",
     "portfolio.p3.tag": "WEB DIZAJN",
-    "portfolio.p3.name": "Dragana Dokmanovi\u0107 \u2014 Natalne karte",
+    "portfolio.p3.name": "Zvezdana Jovanovi\u0107 \u2014 Natalne karte",
     "portfolio.p3.desc": "Elegantan one-page sajt za astrologiju i energetski psiholog \u2014 scroll putovanje kroz planete, zodijak i usluge, sa zakazivanjem termina.",
     "portfolio.p3.tech": "Next.js \u00b7 Vercel \u00b7 Scroll-driven UI",
 
@@ -95,7 +95,7 @@ const translations = {
     "portfolio.p2.desc": "Cinematic landing page: 3D glasses directed by scroll \u2014 rotation, turn toward the visitor, and \u2018try-on\u2019, with a custom lens cursor.",
     "portfolio.p2.tech": "Next.js \u00b7 Three.js \u00b7 React Three Fiber \u00b7 Framer Motion",
     "portfolio.p3.tag": "WEB DESIGN",
-    "portfolio.p3.name": "Dragana Dokmanovi\u0107 \u2014 Natal Charts",
+    "portfolio.p3.name": "Zvezdana Jovanovi\u0107 \u2014 Natal Charts",
     "portfolio.p3.desc": "Elegant one-page site for astrology and energy psychology \u2014 a scroll journey through planets, the zodiac, and services, with appointment booking.",
     "portfolio.p3.tech": "Next.js \u00b7 Vercel \u00b7 Scroll-driven UI",
 
