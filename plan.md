@@ -170,6 +170,14 @@ Ovde snimamo sve promene na sajtu: šta je urađeno, kada i zašto.
 
 ### Git
 - [x] Commit: `46b34d2` — Natalne karte kartica umesto Portfolio u sekciji Projekti
+- [x] Commit: `37b91c0` — Ažuriraj plan.md sa hash-om commita za Natalne karte karticu
+
+### Projekti kartica — Astro Zvezda logo
+- [x] Screenshot hero sekcije zamenjen logom **Astro Zvezda** (`images/Logo Astro Zvezda.png` → `images/projects/astro.png`)
+- [x] Klasa `project-card--logo` — logo u celini na crnoj pozadini (`object-fit: contain`)
+
+### Git
+- [ ] Commit: (sledeći) — Astro Zvezda logo na Natalne karte kartici
 
 ---
 
