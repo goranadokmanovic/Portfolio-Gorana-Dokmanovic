@@ -184,7 +184,7 @@ Ovde snimamo sve promene na sajtu: šta je urađeno, kada i zašto.
 - [x] **Dragana Dokmanović** → **Zvezdana Jovanović** u `portfolio.p3.name` (SR + EN) i `index.html`
 
 ### Git
-- [ ] Commit: (sledeći) — Ispravka imena na Natalne karte kartici
+- [x] Commit: `6ab5097` — Ispravka imena na Natalne karte kartici
 
 ---
 
