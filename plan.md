@@ -177,7 +177,7 @@ Ovde snimamo sve promene na sajtu: šta je urađeno, kada i zašto.
 - [x] Klasa `project-card--logo` — logo u celini na crnoj pozadini (`object-fit: contain`)
 
 ### Git
-- [ ] Commit: (sledeći) — Astro Zvezda logo na Natalne karte kartici
+- [x] Commit: `0b022c3` — Astro Zvezda logo na Natalne karte kartici
 
 ---
 
