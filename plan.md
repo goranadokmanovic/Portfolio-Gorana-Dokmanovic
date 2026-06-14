@@ -169,7 +169,7 @@ Ovde snimamo sve promene na sajtu: šta je urađeno, kada i zašto.
 - [x] `EXPECTED_PROJECT_IMAGES`: `portfolio.png` → `astro.png`
 
 ### Git
-- [ ] Commit: (sledeći) — Natalne karte kartica umesto Portfolio u sekciji Projekti
+- [x] Commit: `46b34d2` — Natalne karte kartica umesto Portfolio u sekciji Projekti
 
 ---
 
